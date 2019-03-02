@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eurka-provider   #服务提供者
+server:
+  port: 7001 #服务提供者端口
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true   #是否注册给服务中心
+    fetchRegistry: true     #是否检索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8080/eureka/
+
+
+
+

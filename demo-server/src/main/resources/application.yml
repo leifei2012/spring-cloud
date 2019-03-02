@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eurka-server   #spring项目名称
+server:
+  port: 8080   #服务器端口(注册服务中心)
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false   #是否注册给服务中心
+    fetchRegistry: false     #是否检索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+
+
+
